@@ -60,14 +60,14 @@
             <HBox prefHeight="1060.0" prefWidth="1674.0">
                <children>
                   <Pane prefHeight="981.0" prefWidth="1434.0" />
-                  <Pane prefHeight="1060.0" prefWidth="239.0">
+                  <Pane prefHeight="1060.0" prefWidth="217.0">
                      <children>
-                        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="874.0" prefWidth="239.0" spacing="40.0">
+                        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1060.0" prefWidth="221.0" spacing="100.0">
                            <children>
                               <TextField fx:id="nbrLines" />
                               <ComboBox fx:id="btnAlgorithm" prefHeight="30.0" prefWidth="168.0" promptText="Select your algorithm" />
                               <Button fx:id="btnStart" mnemonicParsing="false" prefHeight="53.0" prefWidth="168.0" text="Start a game" textOverrun="CLIP" />
-                              <Label fx:id="Chrono" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="63.0" prefWidth="175.0" text="Chrono" textAlignment="CENTER" wrapText="true">
+                              <Label fx:id="Chrono" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="102.0" prefWidth="234.0" text="Chrono :" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font name="Avenir Book" size="28.0" />
                                  </font>

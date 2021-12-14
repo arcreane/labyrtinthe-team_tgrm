@@ -29,6 +29,13 @@ public class MenuController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        btnStart
+        btnLeave.setOnMouseClicked(Leave -> {
+            System.exit(0);
+        });
+        btnStart.setOnMouseClicked(Start -> {
+            System.out.println("Coucou");
+            Chrono.setText("Chrono : 3 minutes\n ");
+        });
     }
+
 }

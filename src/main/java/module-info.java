@@ -7,4 +7,6 @@ module com.tgrm.labyrtintheteam_tgrm {
 
     opens com.tgrm.labyrtintheteam_tgrm to javafx.fxml;
     exports com.tgrm.labyrtintheteam_tgrm;
+    exports com.tgrm.labyrtintheteam_tgrm.controllers;
+    opens com.tgrm.labyrtintheteam_tgrm.controllers to javafx.fxml;
 }

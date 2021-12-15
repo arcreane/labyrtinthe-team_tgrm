@@ -45,7 +45,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tgrm.labyrtintheteam_tgrm.controllers.MenuController">
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tgrm.labyrtintheteam_tgrm.controllers.MenuController">
   <children>
       <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="1629.0">
          <children>
@@ -57,16 +57,16 @@
             </Button>
          </children>
       </HBox>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="1035.0" prefWidth="1920.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <HBox prefHeight="1060.0" prefWidth="1674.0">
+            <HBox>
                <children>
                   <Pane prefHeight="981.0" prefWidth="1434.0" />
                   <Pane prefHeight="1060.0" prefWidth="217.0">
                      <children>
-                        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1060.0" prefWidth="221.0" spacing="100.0">
+                        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="100.0">
                            <children>
-                              <Label text="Create a new Labyrinth" textAlignment="CENTER" wrapText="true">
+                              <Label prefHeight="116.0" prefWidth="217.0" text="Create a new Labyrinth" textAlignment="CENTER" wrapText="true">
                                  <font>
                                     <Font size="32.0" />
                                  </font>

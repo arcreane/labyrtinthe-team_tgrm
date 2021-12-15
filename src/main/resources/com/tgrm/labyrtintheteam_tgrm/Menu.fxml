@@ -47,7 +47,7 @@
 
 <VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tgrm.labyrtintheteam_tgrm.controllers.MenuController">
   <children>
-      <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="1629.0">
+      <HBox alignment="CENTER_RIGHT">
          <children>
           <MenuBar prefHeight="20.0" prefWidth="0.0" />
             <Button fx:id="btnLeave" alignment="CENTER" defaultButton="true" mnemonicParsing="false" prefHeight="20.0" prefWidth="81.0" text="X" textAlignment="CENTER" textFill="RED">
@@ -61,10 +61,10 @@
       <children>
             <HBox>
                <children>
-                  <Pane prefHeight="981.0" prefWidth="1434.0" />
-                  <Pane prefHeight="1060.0" prefWidth="217.0">
+                  <Pane prefHeight="1024.0" prefWidth="1200.0" />
+                  <Pane prefHeight="1060.0" prefWidth="199.0">
                      <children>
-                        <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="100.0">
+                        <VBox alignment="CENTER" layoutX="-86.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="727.0" prefWidth="262.0" spacing="100.0">
                            <children>
                               <Label prefHeight="116.0" prefWidth="217.0" text="Create a new Labyrinth" textAlignment="CENTER" wrapText="true">
                                  <font>

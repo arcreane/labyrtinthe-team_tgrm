@@ -11,7 +11,7 @@ public class MazeController extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MazeController.class.getResource("Menu.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1680, 1050);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("TMGR Maze");
         stage.setScene(scene);
         stage.show();

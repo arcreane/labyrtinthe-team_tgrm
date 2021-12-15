@@ -9,8 +9,5 @@
         <module name="labyrtinthe-team_tgrm" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="labyrtinthe-team_tgrm" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

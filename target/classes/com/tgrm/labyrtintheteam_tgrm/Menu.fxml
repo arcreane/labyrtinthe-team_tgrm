@@ -43,6 +43,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <VBox prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tgrm.labyrtintheteam_tgrm.controllers.MenuController">
   <children>
       <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="1629.0">
@@ -65,7 +67,16 @@
                         <VBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1060.0" prefWidth="221.0" spacing="100.0">
                            <children>
                               <TextField fx:id="nbrLines" />
-                              <ComboBox fx:id="btnAlgorithm" prefHeight="30.0" prefWidth="168.0" promptText="Select your algorithm" />
+                              <ComboBox fx:id="btnAlgorithm" prefHeight="30.0" prefWidth="168.0" promptText="Select your algorithm">
+                               <items>
+                                   <FXCollections fx:factory="observableArrayList">
+                                       <String fx:id="Algo1" fx:value="Algo1" />
+                                       <String fx:id="Algo2" fx:value="Algo2" />
+                                       <String fx:id="Algo3" fx:value="Algo3" />
+                                       <String fx:id="Algo4" fx:value="Algo4" />
+                                   </FXCollections>
+                               </items>
+                              </ComboBox>
                               <Button fx:id="btnStart" mnemonicParsing="false" prefHeight="53.0" prefWidth="168.0" text="Start a game" textOverrun="CLIP" />
                               <Label fx:id="Chrono" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="102.0" prefWidth="234.0" text="Chrono :" textAlignment="CENTER" wrapText="true">
                                  <font>

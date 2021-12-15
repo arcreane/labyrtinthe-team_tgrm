@@ -7,8 +7,12 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
+import com.tgrm.labyrtintheteam_tgrm.models.Timer;
+
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import static java.lang.System.currentTimeMillis;
 
 public class MenuController implements Initializable {
 
@@ -16,7 +20,7 @@ public class MenuController implements Initializable {
     private Label Chrono;
 
     @FXML
-    private ComboBox<?> btnAlgorithm;
+    private ComboBox<String> btnAlgorithm;
 
     @FXML
     private Button btnLeave;
@@ -34,7 +38,7 @@ public class MenuController implements Initializable {
         });
         btnStart.setOnMouseClicked(Start -> {
             System.out.println("Coucou");
-            Chrono.setText("Chrono : 3 minutes\n ");
+            Chrono.setText("Chrono :\n" + currentTimeMillis());
         });
     }
 

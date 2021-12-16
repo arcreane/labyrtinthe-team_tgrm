@@ -18,7 +18,14 @@ public class MazeCell {
         return y;
     }
 
-    @Override
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
     public String toString() {
         return super.toString();
     }

@@ -5,7 +5,7 @@ public class labyrinthe {
 
 
     public static void main(String[] args) {
-        creerLabyrinthe(10,10);
+        creerLabyrinthe(5,5);
     }
 
    static public void creerLabyrinthe(int width, int height) {
@@ -21,16 +21,15 @@ public class labyrinthe {
            }
        }
 
-       List<List<MazeCell>> pathlist = generator( height,width,0,0);
-       for (int l=0; l<pathlist.size();l++){
-           List<MazeCell>  path = pathlist.get(l);
+       List<MazeCell> pathlist = generator( height,width,0,0);
 
 
-        for(int i = 0; i< path.size()-1;i++){
-          int posX1 = path.get(i).getX();
-          int posY1 = path.get(i).getY();
-          int posX2 = path.get(i+1).getX();
-          int posY2 = path.get(i+1).getY();
+
+        for(int i = 0; i< pathlist.size()-1;i++){
+          int posX1 = pathlist.get(i).getX();
+          int posY1 = pathlist.get(i).getY();
+          int posX2 = pathlist.get(i+1).getX();
+          int posY2 = pathlist.get(i+1).getY();
 
 
           if(posX1<posX2 && labyrinthe[posX1][posY1]==0){   //aller a droite et la case actuel est pleine
@@ -51,19 +50,9 @@ public class labyrinthe {
             }
 
 
-                    System.out.println(labyrinthe[posX1][posY1] + "  " + posX1 +"  "+ posY1);
-
-
-
-
         }
 
-       System.out.println(path.toString());
-       for (colonnes=0;colonnes<height;colonnes++) {
-           for (lignes = 0; lignes < width; lignes++){
-               System.out.print(labyrinthe[colonnes][lignes] + "  " );
-           }
-       } System.out.println("");
+
 
        for(lignes=0;lignes<width;lignes++){
            System.out.print(" ___");
@@ -106,17 +95,17 @@ public class labyrinthe {
 
             }
         }
-    }
 
-     static List<List<MazeCell>> generator( int height, int width,int x,int y ) {
+
+     static List<MazeCell> generator(int height, int width, int x, int y ) {
          boolean fin = false;
          boolean caseVide = false;
          int posX = x;
          int posY = y;
          List<MazeCell> nextCell = new ArrayList();
-         List<MazeCell> path = new ArrayList();
+         List<MazeCell> pathList = new ArrayList();
          List<MazeCell> voisins = new ArrayList<>();
-         List<List<MazeCell>> pathList = new ArrayList();
+      //   List<List<MazeCell>> pathList = new ArrayList();
 
          boolean [][] visited = new boolean[width][height];
 
@@ -132,7 +121,7 @@ public class labyrinthe {
          posX=0;
          posY=0;
          visited[0][0] = true;
-         path.add(new MazeCell(0,0));
+         pathList.add(new MazeCell(0,0));
 
          for (int cols=0;cols<height;cols++){
              for(int raw = 0;raw<width;raw++ ){
@@ -191,7 +180,7 @@ public class labyrinthe {
                          posX = nextCell.get((int) result).getX();
                          posY = nextCell.get((int) result).getY();
                          visited[posX][posY] = true;
-                         path.add(new MazeCell(posX, posY));
+                         pathList.add(new MazeCell(posX, posY));
 
                          nextCell.remove((int) result);
                          for (int i = 0; i < nextCell.size(); i++) {
@@ -217,12 +206,12 @@ public class labyrinthe {
                              posY = voisins.get(l).getY();
                              fin = false;
                              visited[posX][posY]=true;
-                             path.add(new MazeCell(posX,posY));
-                            
+                             pathList.add(new MazeCell(posX,posY));
+
                          }
                      }
 
-                     pathList.add(path);
+                  //   pathList.add(path);
 
                }
            }

@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-
+import com.tgrm.labyrtintheteam_tgrm.models.Labyrinth;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -35,6 +35,8 @@ public class MenuController implements Initializable {
             System.exit(0);
         });
         btnStart.setOnMouseClicked(Start -> {
+
+            Labyrinth.createLabyrinth(Integer.parseInt(nbrLines.getText()), Integer.parseInt(nbrLines.getText()));
             int seconds = 0;
             int minutes = 0;
 

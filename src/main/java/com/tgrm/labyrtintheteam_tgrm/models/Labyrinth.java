@@ -6,11 +6,14 @@ public class Labyrinth {
 
     public static void main(String[] args) {
 
-        // Create a labyrinth of size 10x10
-
+        // Create a labyrinth of size 5x5
         createLabyrinth(5,5);
+
+        //Start the countdown of 1 minute
         System.out.println("Countdown !\n");
         labCountDown(30,60);
+
+        //When the countdown is over, we stop the game and clear the screen
         System.out.println("\033[H\033[2J");
         System.out.println("Time's up !\n");
     }
@@ -486,7 +489,7 @@ public class Labyrinth {
                 Thread.sleep(SecsPerChar);
 
                 // Initialize our TimeBar
-                String TimeBar = String.format("|%s%s|\r", "#".repeat(nbDisplayed), " ".repeat(chars - nbDisplayed));
+                String TimeBar = String.format("|%s%s|\r", "#".repeat(nbDisplayed), " ".repeat(chars+1 - nbDisplayed));
 
                 // Print our TimeBar
 

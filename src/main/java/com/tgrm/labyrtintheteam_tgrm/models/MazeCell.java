@@ -26,7 +26,11 @@ public class MazeCell {
         this.x = x;
     }
 
+
     public String toString() {
-        return super.toString();
+        return "MazeCell{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
     }
 }

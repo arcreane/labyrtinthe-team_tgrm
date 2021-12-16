@@ -9,7 +9,10 @@ public class Labyrinth {
         // Create a labyrinth of size 10x10
 
         createLabyrinth(5,5);
-
+        System.out.println("Countdown !\n");
+        labCountDown(30,60);
+        System.out.println("\033[H\033[2J");
+        System.out.println("Time's up !\n");
     }
 
    static public void createLabyrinth(int width, int height) {
@@ -452,6 +455,54 @@ public class Labyrinth {
 
 
      }
+
+     // Method to generate a Countdown to resolve the maze (if it's functional of course)
+
+    public static void labCountDown(int chars, int seconds) {
+
+        //  Make our characters appear every 1/30 of our total time
+
+        int SecsPerChar = seconds * 1000 / (chars + 1);
+
+        // Initialize our counter that will go up to the total time
+        int CountingUp = 0;
+
+        // Initialize our counter that will represent our time in seconds
+        int timeInS = seconds * 1000;
+
+        // Int the number of characters that are already displayed
+
+        int nbDisplayed = 0;
+
+
+        // Wihile our counter is less than our total time
+        while (CountingUp < timeInS) {
+
+
+            try {
+
+                // Wait 1 portion of our char of our total time
+
+                Thread.sleep(SecsPerChar);
+
+                // Initialize our TimeBar
+                String TimeBar = String.format("|%s%s|\r", "#".repeat(nbDisplayed), " ".repeat(chars - nbDisplayed));
+
+                // Print our TimeBar
+
+                System.out.write(TimeBar.getBytes());
+
+            } catch (Exception ex) {
+
+                // If there is an error print it, else do nothing
+
+                System.out.println(ex);
+            }
+                // Increment our counter
+            CountingUp += SecsPerChar;
+            nbDisplayed++;
+        }
+    }
 }
 
 

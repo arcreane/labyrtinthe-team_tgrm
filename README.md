@@ -5,11 +5,9 @@ labyrtinthe-team_tgrm created by GitHub Classroom
 ## Where are the most important files located?
 
 ```bash
-$ branch Develop
+$ branch dev
 $ package src/main/javacom.tgrm.labyrtintheteam_tgrm.models/Labyrinth
-$ branch Rui
-$ Models : src/main/java/com.coding.appfx/models
-$ FMX : src/main/ressources/com.coding.appfx
+$ branch dev-rui
 ```
 
 ## Explainations 
